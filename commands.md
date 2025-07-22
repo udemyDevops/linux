@@ -12,3 +12,7 @@ ss -tunlp | grep <process Id>
 ```
 fdisk -l
 ```
+* list the partitions
+```
+df -h
+```
