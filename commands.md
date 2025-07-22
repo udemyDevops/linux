@@ -8,3 +8,7 @@ ps -ef | grep <process name>
 ss -tunlp | grep <process Id>
 ```
 
+* check the available/connected hard disks
+```
+fdisk -l
+```
