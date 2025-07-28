@@ -12,7 +12,7 @@ ss -tunlp | grep <process Id>
 ```
 fdisk -l
 ```
-* list the partitions
+* list the partitions mounted to respective hard disk
 ```
 df -h
 ```
