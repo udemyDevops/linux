@@ -3,6 +3,11 @@
 ps -ef | grep <process name>
 ```
 
+* To see which process is using a directory
+```
+lsof <directory path>
+```
+
 * check the open ports opened for aa process
 ```
 ss -tunlp | grep <process Id>
@@ -46,7 +51,7 @@ mount <partition name> <directory path>
         eg: mount /dev/xvdf1 /var/www/html/images
 
 - but this is a temporary mount meaning when the server is rebooted the mount point will be detached.
-- To make a permanent mount, first unmount the directoty
+- To make a permanent mount, first unmount the directoty after checking no process is using the directory 'lsof' command
 ```
 umount <directory path>
 ```
@@ -67,4 +72,5 @@ mount -a
 ```
 - restart the respective service after completing the mount
 - eg: systemctl restart httpd
-                
+
+* To detach the volume, first unmount the directoty after checking no process is using the directory 'lsof' command to check which process is using, 'kill' command to kill the process and also remove the line related to the directory in '/etc/fstab' file
