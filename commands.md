@@ -44,3 +44,27 @@ mkfs
 mount <partition name> <directory path>
 ```
         eg: mount /dev/xvdf1 /var/www/html/images
+
+- but this is a temporary mount meaning when the server is rebooted the mount point will be detached.
+- To make a permanent mount, first unmount the directoty
+```
+umount <directory path>
+```
+                eg: unmount /var/www/html/images
+* To add a permanent mount
+```
+vim /etc/fstab
+```
+- add a new line in the file for the partition and directory in columns
+```
+<partion name>tab<directory path>tab<format>tab<defaults>tab<0 - for fsck>space<0 - for dump>
+```
+                eg: /dev/xvdf1        /var/www/html/images        ext4        defaults        0 0
+
+- now the 'df -h' command will not show the mount point. fstab file should be reaad again to execute the entries
+```
+mount -a
+```
+- restart the respective service after completing the mount
+- eg: systemctl restart httpd
+                
