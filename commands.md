@@ -39,7 +39,7 @@ mkfs
 ```
         eg: mkfs.ext4 /dev/xvdf1
 
-* mount the partion to selected directory... before mounting move the data in the directory to another directory to backup, cuz any existing data in the directory will not be visible when the partition is mounted to the directory. So by taking backup the data can be copied back once the partition is unmounted 
+* mount the partion to selected directory... before mounting move the data in the directory to another directory to backup, cuz any existing data in the directory will not be visible/accessible when the partition is mounted to the directory. So by taking backup the data can be copied back once the partition is mounted.
 ```
 mount <partition name> <directory path>
 ```
