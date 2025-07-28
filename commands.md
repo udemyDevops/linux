@@ -20,9 +20,9 @@ df -h
 ```
 fdisk <disk name>
 ```
-  eg: fdisk /dev/xvdf
+    eg: fdisk /dev/xvdf
 
-  disk name --- name of the disk where the new partition is to be created.
+    disk name --- name of the disk where the new partition is to be created.
 
 - command mode for fdisk will open
 - m -- help in fdisk utility, list of commands
@@ -37,7 +37,7 @@ mkfs
 ```
 <format> <partition name>
 ```
-  eg: mkfs.ext4 /dev/xvdf1
+    eg: mkfs.ext4 /dev/xvdf1
 
 * mount the partion to selected directory... before mounting move the data in the directory to another directory to backup, cuz any existing data in the directory will not be visible when the partition is mounted to the directory. So by taking backup the data can be copied back once the partition is unmounted 
 ```
